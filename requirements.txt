@@ -1,0 +1,4 @@
+# Filequh System Test Requirements
+# Standard library only (urllib, sys, json) - no external packages strictly required
+requests>=2.31.0
+pytest>=8.0.0

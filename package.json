@@ -1,0 +1,18 @@
+{
+  "name": "file-management-system",
+  "version": "1.0.0",
+  "description": "Filequh - Full-Stack File Management System with Next.js, Express & SQLite",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k -p \"[{name}]\" -n \"BACKEND,FRONTEND\" -c \"yellow.bold,cyan.bold\" \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "build": "npm run build --prefix backend && npm run build --prefix frontend",
+    "start": "concurrently -k -p \"[{name}]\" -n \"BACKEND,FRONTEND\" -c \"yellow.bold,cyan.bold\" \"npm start --prefix backend\" \"npm start --prefix frontend\"",
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "test:system": "python test_system.py"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.4"
+  }
+}
